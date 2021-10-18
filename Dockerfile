@@ -4,7 +4,7 @@ RUN wget https://downloads.openwrt.org/releases/21.02.0/targets/x86/64/openwrt-2
 RUN cd /tmp/openwrt ; tar -xvzf ./openwrt.tar.gz; rm -rf openwrt.tar.gz
 
 FROM alpine
-COPY --from=builder /tmp/openwrt/* /
+COPY --from=builder /tmp/openwrt /
 EXPOSE 80
 
 
